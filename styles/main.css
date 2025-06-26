@@ -84,7 +84,33 @@ a:hover {
 *:focus {
   border: dotted 1px var(--accent-light);
   outline: none;
-  padding: 10px;
+  padding: 5px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 10000;
+  background: var(--bg-light);
+  color: var(--accent-dark);
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5em 1em;
+  outline: 2px solid var(--accent-light);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 @media (min-width: 768px) {
@@ -187,7 +213,7 @@ a:hover {
 
 .intro .title {
   color: var(--bg-dark-faded);
-  font-size: 6vw;
+  font-size: 10vw;
   font-weight: 900;
   grid-column: 2;
   grid-row: 2;
@@ -196,10 +222,20 @@ a:hover {
 }
 
 .intro .subtitle {
-  font-size: 3vw;
+  font-size: 6vw;
   grid-column: 2;
   grid-row: 3;
   letter-spacing: 0.125rem;
+}
+
+@media (min-width: 768px) {
+  .intro .title {
+    font-size: 5vw;
+  }
+
+  .intro .subtitle {
+    font-size: 3vw;
+  }
 }
 
 /* --------
