@@ -139,11 +139,7 @@ a:hover {
   }
 }
 
-/* -----------
- * NAVIGATION
- * ----------- */
-
- .header {
+.header {
   align-items: center;
   background: linear-gradient(#ffffff 80%, transparent);
   display: flex;
@@ -217,10 +213,6 @@ h1.logo {
   }
 }
 
-/* -----
- * INTRO
- * ----- */
-
 .logo-image {
   grid-column: 2;
   grid-row: 2;
@@ -260,7 +252,6 @@ h1.logo {
 }
 
 .intro {
-  background: var(--accent-dark);
   background: linear-gradient(346deg,rgba(30, 58, 95, 1) 0%, rgba(8, 64, 128, 1) 49%, rgba(59, 130, 246, 1) 100%);
   display: grid;
   grid-template-columns: minmax(10px, 1fr) minmax(min-content, 75vw) minmax(10px, 1fr);
@@ -283,10 +274,6 @@ h1.logo {
     transform: none;
   }
 }
-
-/* --------
- * SECTIONS
- * -------- */
 
 .grid-container {
   display: grid;
@@ -394,6 +381,7 @@ h1.logo {
 
   .highlight-banner {
     grid-template-columns: minmax(1rem, 5vw) 1fr minmax(1rem, 5vw);
+    padding: 2.5rem;
   }
 
   .highlight-card-list {
@@ -406,10 +394,6 @@ h1.logo {
     grid-column: 1 / -1;
   }
 }
-
-/* ------
- * FOOTER
- * ------ */
 
 .footer {
   background: var(--accent-dark);
