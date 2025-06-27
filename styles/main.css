@@ -250,7 +250,9 @@ h1.logo {
 }
 
 .intro {
-  background: linear-gradient(346deg,rgba(30, 58, 95, 1) 0%, rgba(8, 64, 128, 1) 49%, rgba(59, 130, 246, 1) 100%);
+  background: linear-gradient(346deg, #1E3A5F, #084080, #3B82F6, rgba(216, 208, 185, 1) 100%, #1E3A5F);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease-in-out infinite;
   display: grid;
   grid-template-columns: minmax(10px, 1fr) minmax(min-content, 75vw) minmax(10px, 1fr);
   grid-template-rows: 1fr min-content min-content 1fr;
@@ -258,6 +260,18 @@ h1.logo {
   height: 100vh;
   position: relative;
   z-index: 1000;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .fade-in {
