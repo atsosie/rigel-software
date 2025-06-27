@@ -9,6 +9,7 @@
   --bg-dark-faded: rgba(216, 208, 185, 0.75);
   --bg-faded: rgba(255, 255, 255, 0.5);
   --bg-light: #f6f4ef;
+  --bg-light-faded: rgba(246, 244, 239, 0.75);
   --bg-medium: #e5dfd0;
   --text-primary: #373741;
   --text-secondary: #908c83;
@@ -223,7 +224,7 @@ h1.logo {
   width: 100%;
 }
 
-.logo-image img {
+.logo-image svg {
   display: block;
   height: 100%;
   max-width: 90vw;
