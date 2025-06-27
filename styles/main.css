@@ -234,6 +234,7 @@ a:hover {
 .intro .subtitle {
   color: var(--bg-dark);
   font-size: 6vw;
+  font-weight: 500;
   grid-column: 2;
   grid-row: 3;
   letter-spacing: 0.125rem;
@@ -266,14 +267,24 @@ a:hover {
  * SECTIONS
  * -------- */
 
-.section {
-  padding-top: 150px;
+ .grid-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(1em, 5vw) 1fr 1fr 1fr minmax(1em, 5vw);
 }
 
-.section-container {
-  display: grid;
-  grid-row-gap: 2em;
-  grid-template-columns: minmax(1em, 5vw) 1fr 1fr 1fr minmax(1em, 5vw);
+.grid-column-left {
+  grid-column: 2 / 4;
+  grid-row: 2;
+}
+
+.grid-column-right {
+  grid-column: 4 / 6;
+  grid-row: 2;
+}
+
+.section {
+  padding-top: 150px;
 }
 
 .section-hr {
@@ -292,14 +303,38 @@ a:hover {
   padding-left: 0.5rem;
 }
 
-.section-column-left {
+.section-intro {
   grid-column: 2 / 4;
   grid-row: 2;
 }
 
-.section-column-right {
-  grid-column: 4 / 5;
-  grid-row: 2;
+.highlight-banner {
+  background-image: url("/images/painted-canvas-layer5.png");
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(1em, 5vw) 1fr minmax(1em, 5vw);
+  padding: 2rem;
+}
+
+.highlight-card-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  grid-column: 2;
+}
+
+.highlight-card {
+  box-shadow: 0 4px 24px 0 rgba(55, 55, 65, 0.10);
+  padding: 2rem 1.5rem;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-card:hover,
+.highlight-card:focus-within {
+  box-shadow: 0 8px 32px 0 rgba(129, 37, 48, 0.18);
+  border-color: var(--accent-light);
 }
 
 .contact-card-message {
@@ -308,7 +343,6 @@ a:hover {
   border: 1px solid var(--bg-dark-faded);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   grid-row: 2;
-  grid-column: 2 / 3;
   padding: 2rem;
   text-align: center;
 }
@@ -319,23 +353,8 @@ a:hover {
   border: 1px solid var(--bg-dark-faded);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: grid;
-  grid-column: 3 / 5;
   grid-row: 2;
   padding-left: 1.5rem;
-}
-
-.service-card-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  grid-column: 2 / 5;
-  grid-row: 3;
-}
-
-.service-card {
-  background: var(--bg-faded);
-  padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -343,18 +362,14 @@ a:hover {
     padding-top: 70px;
   }
 
-  .section-content {
-    max-width: 60ch;
-  }
-
-  .services-intro {
-    font-size: 1.25rem;
-  }
-
-  .service-card-list {
+  .highlight-card-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(250px, 1fr));
     gap: 1.5em;
+  }
+
+  .highlight-card.wide-card {
+    grid-column: 1 / -1;
   }
 }
 
