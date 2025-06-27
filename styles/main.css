@@ -68,12 +68,6 @@ a:hover {
   text-transform: uppercase;
 }
 
-.heading-italic {
-  color: var(--text-secondary);
-  font-family: 'Lora', Times, sans-serif;
-  font-style: italic;
-}
-
 .heading-primary {
   color: var(--text-primary);
   margin-bottom: 1rem;
