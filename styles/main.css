@@ -305,7 +305,7 @@ h1.logo {
 
 .highlight-banner {
   background-color: var(--bg-medium);
-  background-image: url("/images/painted-canvas-layer5.png");
+  background-image: url("../images/painted-canvas-layer5.png");
   display: grid;
   grid-column: 1 / -1;
   grid-template-columns: minmax(1rem, 5vw) 1fr minmax(1rem, 5vw);
