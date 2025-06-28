@@ -147,14 +147,15 @@ a:hover {
   z-index: 999;
 }
 
-h1.logo {
+h1.logo-title {
   display: inline;
+  font-family: "Roboto Mono", monospace;
   font-size: 1rem;
   font-weight: 900;
   margin: 0
 }
 
-.logo a {
+.nav-title {
   color: var(--accent-light);
   font-size: 1rem;
   font-weight: 900;
