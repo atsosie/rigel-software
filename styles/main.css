@@ -128,7 +128,7 @@ a:hover {
   }
 
   a:hover {
-    border: 2px solid var(--accent-dark);
+    border: 2px solid var(--accent-light);
     text-decoration: none;
   }
 
@@ -155,7 +155,7 @@ h1.logo {
 }
 
 .logo a {
-  color: var(--accent-dark);
+  color: var(--accent-light);
   font-size: 1rem;
   font-weight: 900;
 }
@@ -250,8 +250,8 @@ h1.logo {
 }
 
 .intro {
-  background: linear-gradient(346deg, #1E3A5F, #084080, #3B82F6, rgba(216, 208, 185, 1) 100%, #1E3A5F);
-  background-size: 400% 400%;
+  background: linear-gradient(325deg, hsl(212, 48%, 35%), hsl(212, 48%, 35%), hsl(212, 54%, 32%), #204c7d, rgba(8, 64, 128, 1), hsl(212, 75%, 22%), #18304f, hsl(213, 54%, 19%));
+  background-size: 200% 200%;
   animation: gradientMove 12s ease-in-out infinite;
   display: grid;
   grid-template-columns: minmax(10px, 1fr) minmax(min-content, 75vw) minmax(10px, 1fr);
