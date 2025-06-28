@@ -51,17 +51,6 @@ p {
   margin-bottom: 1.5rem;
 }
 
-a {
-  color: var(--accent-dark);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--accent-dark);
-  text-decoration: underline;
-}
-
 .heading-bold {
   color: var(--text-secondary);
   font-weight: normal;
@@ -72,6 +61,18 @@ a:hover {
 .heading-primary {
   color: var(--text-primary);
   margin-bottom: 1rem;
+}
+
+.link-primary {
+  border: solid 1px transparent;
+  color: var(--accent-dark);
+  padding: 0;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.link-primary:hover {
+  color: var(--accent-light);
 }
 
 .list-unstyled {
@@ -90,10 +91,14 @@ a:hover {
   line-height: 1.5;
 }
 
+a {
+  border: dotted 1px transparent;
+}
+
 *:focus {
   border: dotted 1px var(--accent-light);
   outline: none;
-  padding: 5px;
+  padding: 0;
 }
 
 .skip-link {
@@ -122,16 +127,6 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  a {
-    border: 2px solid transparent;
-    padding: 10px;
-  }
-
-  a:hover {
-    border: 2px solid var(--accent-light);
-    text-decoration: none;
-  }
-
   .list-bulleted {
     margin-left: 1.5rem;
   }
@@ -176,7 +171,13 @@ h1.logo-title {
 .nav-link {
   display: block;
   margin-bottom: 0.5rem;
+  text-decoration: none;
   white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--accent-light);
+  text-decoration: underline;
 }
 
 .nav-hr {
@@ -199,8 +200,15 @@ h1.logo-title {
   }
 
   .nav-link {
+    border: 2px solid transparent;
     display: inline;
     margin: 0;
+    padding: 10px;
+  }
+
+  .nav-link:hover {
+    border: 2px solid var(--accent-light);
+    text-decoration: none;
   }
 
   .nav-hr {
@@ -357,26 +365,16 @@ h1.logo-title {
   margin-top: auto;
 }
 
-.contact-item {
+.contact-list-item {
   align-items: center;
   padding-bottom: 1.5rem;
 }
 
-.contact-item h3 {
+.contact-item-heading {
   margin-bottom: 0.5rem;
 }
 
-.contact-item a {
-  padding: 0;
-  text-decoration: none;
-}
-
-.contact-item a:hover {
-  border: none;
-  text-decoration: underline;
-}
-
-.contact-section {
+.contact-list {
   grid-column: 2 / 5;
   grid-row: 2;
 }
