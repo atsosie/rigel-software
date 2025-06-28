@@ -250,12 +250,13 @@ h1.logo-title {
   grid-row: 3;
   padding: 10px;
   text-align: center;
+  text-decoration: none;
 }
 
 .intro-cta:hover {
   background-color: var(--bg-light);
+  color: var(--accent-dark);
   border: 2px solid var(--accent-dark);
-  text-decoration: none;
 }
 
 .intro {
