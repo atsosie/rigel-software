@@ -63,45 +63,6 @@ p {
   margin-bottom: 1rem;
 }
 
-.link-underline {
-  background:
-    linear-gradient(
-      to right,
-      rgba(216, 208, 185, 1),
-      rgba(216, 208, 185, 1)
-    );
-  background-size: 100% 2px, 0 2px;
-  background-position: 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  color: var(--accent-dark);
-  padding-bottom: 3px;
-  position: relative;
-  text-decoration: none;
-}
-
-.link-underline::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  border-radius: 4px;
-  background-color: var(--accent-light);
-  bottom: 0;
-  left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform .3s ease-in-out;
-}
-
-.link-underline:hover {
-  color: var(--accent-light);
-}
-
-.link-underline:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
-}
-
 .list-unstyled {
   list-style: none;
 }
@@ -153,6 +114,15 @@ a {
   width: auto;
 }
 
+.link-underline {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+.link-underline:hover {
+  color: var(--accent-light);
+}
+
 @media (min-width: 768px) {
   .list-bulleted {
     margin-left: 1.5rem;
@@ -178,7 +148,7 @@ h1.logo-title {
 }
 
 .nav-title {
-  color: var(--accent-light);
+  color: var(--accent-dark);
   font-size: 1rem;
   font-weight: 900;
 }
@@ -244,6 +214,40 @@ h1.logo-title {
     display: inline;
     height: 0.125rem;
     width: 100%;
+  }
+
+  .link-underline {
+    background:
+      linear-gradient(
+        to right,
+        rgba(216, 208, 185, 1),
+        rgba(216, 208, 185, 1)
+      );
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 3px;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .link-underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--accent-light);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+  .link-underline:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
   }
 }
 
