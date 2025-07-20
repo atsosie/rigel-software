@@ -3,14 +3,10 @@
   --accent-dark-faded: rgba(30, 58, 95, 0.5);
   --accent-light: #084080;
   --accent-light-faded: rgba(8, 64, 128, 0.5);
-  --bg-dark: #d8d0b9;
-  --bg-dark-faded: rgba(216, 208, 185, 0.75);
-  --bg-faded: rgba(255, 255, 255, 0.5);
-  --bg-light: #f6f4ef;
-  --bg-light-faded: rgba(246, 244, 239, 0.75);
-  --bg-medium: #e5dfd0;
+  --background: #f9f4ee;
+  --background-faded: rgba(249, 244, 238, 0.8);
   --text-primary: #373741;
-  --text-secondary: #908c83;
+  --text-secondary: #a5594e;
 }
 
 *, *::before, *::after {
@@ -30,7 +26,7 @@ html {
 }
 
 body {
-  background: #f6f4ef;
+  background: #f9f4ee;
   color: #373741;
   font-family: "Lato", Helvetica, sans-serif;
   overflow-x: hidden;
@@ -59,7 +55,7 @@ a {
 }
 
 .heading-bold {
-  color: #908c83;
+  color: #a5594e;
   font-weight: normal;
   letter-spacing: 0.125rem;
   text-transform: uppercase;
@@ -99,7 +95,7 @@ a {
 }
 @media (min-width: 768px) {
   .link-underline {
-    background: linear-gradient(to right, #d8d0b9, #d8d0b9);
+    background: linear-gradient(to right, #a5594e, #a5594e);
     background-size: 100% 2px, 0 2px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
@@ -127,7 +123,7 @@ a {
 }
 
 .skip-link {
-  background: #f6f4ef;
+  background: #f9f4ee;
   color: #1e3a5f;
   font-weight: bold;
   height: 1px;
@@ -235,7 +231,7 @@ h1.logo-title {
 @media (min-width: 768px) {
   .nav-hr {
     align-self: center;
-    background-color: #d8d0b9;
+    background-color: #a5594e;
     display: inline;
     height: 0.125rem;
     width: 100%;
@@ -301,8 +297,8 @@ h1.logo-title {
 
 .intro-cta {
   background: #1e3a5f;
-  border: 2px solid #f6f4ef;
-  color: #f6f4ef;
+  border: 2px solid #f9f4ee;
+  color: #f9f4ee;
   grid-column: 2;
   grid-row: 3;
   padding: 10px;
@@ -310,7 +306,7 @@ h1.logo-title {
   text-decoration: none;
 }
 .intro-cta:hover {
-  background-color: #f6f4ef;
+  background-color: #f9f4ee;
   color: #1e3a5f;
   border: 2px solid #1e3a5f;
 }
@@ -337,7 +333,7 @@ h1.logo-title {
 
 .section-hr {
   align-self: center;
-  background-color: #d8d0b9;
+  background-color: #a5594e;
   grid-column: 1/3;
   grid-row: 1;
   height: 0.125rem;
@@ -364,8 +360,8 @@ h1.logo-title {
 }
 
 .highlight-banner {
-  background-color: #e5dfd0;
-  background-image: url("../images/painted-canvas-layer5.png");
+  background-color: rgba(8, 64, 128, 0.5);
+  background-image: url("../images/painted-canvas-layer4.png");
   display: grid;
   grid-column: 1/-1;
   grid-template-columns: minmax(1rem, 5vw) 1fr minmax(1rem, 5vw);
@@ -392,7 +388,7 @@ h1.logo-title {
 }
 
 .highlight-card {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(249, 244, 238, 0.8);
   box-shadow: 0 4px 24px 0 rgba(55, 55, 65, 0.1);
   display: flex;
   flex-direction: column;
@@ -437,7 +433,7 @@ h1.logo-title {
 
 .footer {
   background: #1e3a5f;
-  color: #f6f4ef;
+  color: #f9f4ee;
   padding: 5vw;
   margin-top: 70px;
 }
