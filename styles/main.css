@@ -12,9 +12,11 @@
   --color-teal: #20b2aa;
   --color-grey-dark: #3d4352;
   --color-grey-medium: #707788;
-  --color-grey-light: #a4abbd;
+  --color-grey-light: #dcdee5;
   --color-warm-white: #fbf9fa;
   --color-white: #ffffff;
+  --section-space-top-mobile: 155px;
+  --section-space-top-desktop: 100px;
   --text-size-body: 18px;
   --text-size-medium: 1.25rem;
   --text-size-large: text-size-large;
@@ -36,17 +38,32 @@ html {
   font-size: 18px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
 body {
-  background: #fbf9fa;
+  background-color: #1e3a5f;
   color: #3d4352;
-  font-family: "Lato", Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 18px;
   overflow-x: hidden;
 }
 
 p {
   line-height: 1.75;
-  margin-bottom: 1.5rem;
+  text-wrap: pretty;
+}
+p + p {
+  margin-top: 1.5rem;
+}
+
+.code {
+  background-color: #dcdee5;
+  border-radius: 4px;
+  color: #3d4352;
+  font-family: "Roboto Mono", monospace;
+  padding: 0.25rem;
 }
 
 .button {
@@ -55,7 +72,7 @@ p {
   color: #fbf9fa;
   cursor: pointer;
   font-size: 1.25rem;
-  font-weight: normal;
+  font-weight: 400;
   letter-spacing: 0.125rem;
   margin: 0;
   padding: 12px 24px;
@@ -76,7 +93,7 @@ p {
 .heading-primary {
   color: #915865;
   font-size: 1.25rem;
-  font-weight: normal;
+  font-weight: 400;
   letter-spacing: 0.125rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -90,8 +107,9 @@ p {
 .heading-secondary {
   color: #3d4352;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 900;
   margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 @media (min-width: 768px) {
   .heading-secondary {
@@ -101,13 +119,18 @@ p {
 
 .heading-tertiary {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 900;
   margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
 @media (min-width: 768px) {
   .heading-tertiary {
     font-size: 1.25rem;
   }
+}
+
+.text-bold {
+  font-weight: 900;
 }
 
 .list-unstyled {
@@ -120,6 +143,7 @@ p {
   gap: 0.5rem;
   list-style: disc;
   margin-left: 1rem;
+  margin-top: 1rem;
 }
 .list-bulleted li {
   line-height: 1.5;
@@ -129,8 +153,11 @@ p {
 }
 @media (min-width: 768px) {
   .list-bulleted {
-    margin-left: 1.5rem;
+    margin-left: 2rem;
   }
+}
+.list-bulleted + p {
+  margin-top: 1.5rem;
 }
 
 .link-underline {
@@ -180,7 +207,7 @@ p {
 .skip-link {
   background: #fbf9fa;
   color: #1e3a5f;
-  font-weight: bold;
+  font-weight: 900;
   height: 1px;
   position: absolute;
   left: -999px;
@@ -221,14 +248,11 @@ h1.logo-title {
   display: inline;
   font-family: "Roboto Mono", monospace;
   font-size: 1rem;
-  font-weight: 900;
+  font-weight: 600;
   margin: 0;
 }
-
-.nav-title {
+h1.logo-title .nav-link {
   color: #1e3a5f;
-  font-size: 1rem;
-  font-weight: 900;
 }
 
 .nav {
@@ -358,14 +382,19 @@ h1.logo-title {
 }
 
 .grid-container {
+  column-gap: 0.5rem;
   display: grid;
-  gap: 0.5rem;
   grid-template-columns: minmax(10px, 5vw) 1fr 1fr 1fr minmax(10px, 5vw);
 }
 @media (min-width: 768px) {
   .grid-container {
-    gap: 1.5rem;
+    column-gap: 1.5rem;
   }
+}
+
+.main-container {
+  background-color: #fbf9fa;
+  padding-bottom: 70px;
 }
 
 .section {
@@ -419,11 +448,13 @@ h1.logo-title {
   display: grid;
   grid-column: 1/-1;
   grid-template-columns: minmax(1rem, 5vw) 1fr minmax(1rem, 5vw);
+  margin-top: 2rem;
   padding: 1rem 0;
 }
 @media (min-width: 768px) {
   .highlight-banner {
     grid-template-columns: minmax(1rem, 5vw) 1fr minmax(1rem, 5vw);
+    margin-top: 3rem;
     padding: 2.5rem;
   }
 }
@@ -454,7 +485,7 @@ h1.logo-title {
 }
 @media (min-width: 768px) {
   .highlight-card {
-    padding: 2rem;
+    padding: 2.5rem;
   }
 }
 @media (min-width: 768px) {
@@ -466,9 +497,13 @@ h1.logo-title {
   box-shadow: 0 8px 32px 0 rgba(30, 58, 95, 0.75);
   border-color: #2d4a73;
 }
+.highlight-card .heading-primary, .highlight-card .heading-secondary, .highlight-card .heading-tertiary {
+  margin-top: 0;
+}
 
 .card-icon {
   margin-top: auto;
+  padding-top: 1rem;
 }
 
 .contact-list {
@@ -478,7 +513,7 @@ h1.logo-title {
 
 .contact-item {
   align-items: center;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 .footer-link-list {
@@ -503,7 +538,6 @@ h1.logo-title {
 .footer {
   background: #1e3a5f;
   color: #fbf9fa;
-  margin-top: 70px;
   padding-bottom: 1.5rem;
 }
 

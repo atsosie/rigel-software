@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Privacy Policy | Rigel Software Inc.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+  <link rel="preload" href="/fonts/roboto-mono-v30-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/lato-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/lato-v24-latin-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/fonts.css">
   <link href="styles/main.css" rel="stylesheet">
 </head>
 <body>
   <header class="header">
     <nav class="nav" aria-label="Main navigation">
       <h1 class="logo-title">
-        <a class="nav-link nav-title" href="index.html">Rigel Software</a>
+        <a class="nav-link" href="index.html">Rigel Software</a>
       </h1>
       <div aria-hidden="true" class="nav-hr"></div>
       <ul class="nav-link-list list-unstyled">
@@ -24,17 +24,39 @@
       </ul>
     </nav>
   </header>
-  <main id="main-content">
+  <main class="main-container" id="main-content">
     <section class="section">
       <div class="grid-container">
         <div aria-hidden="true" class="section-hr"></div>
         <h2 class="section-heading heading-primary">Privacy Policy</h2>
         <div class="section-intro">
-          <p>Effective Date: August 27, 2020</p>
-          <p>Last Updated: July 19, 2025</p>
-          <p>We respect your privacy. Our website does not collect any data from visitors for any purpose. We do not use cookies, analytics, or third-party tracking tools. We do not have contact forms, user accounts, or newsletter sign-ups.</p>
+          <p class="text-bold">Effective Date: August 27, 2020</p>
+          <p class="text-bold">Last Updated: July 19, 2025</p>
+          <p>Rigel Software Inc. ("we," "our," or "us") values your privacy. We designed our website to be simple, accessible, and privacy-friendly.</p>
           <p>We only collect personal information through direct client relationships, such as during contract negotiation, private correspondence, or project delivery. This data is handled in accordance with applicable Canadian privacy laws (e.g., PIPEDA), stored securely, and never sold or shared without consent.</p>
           <p>If you have any questions or concerns about how we handle your data, please contact us at: <span class="username">info</span><span class="at-symbol">@</span><span class="domain">rigel-software.com</span>.</p>
+          <h3 class="heading-secondary">Information We Do Not Collect</h3>
+          <p>When you visit our site:</p>
+          <ul class="list-bulleted">
+            <li>We do not collect or store your personal information.</li>
+            <li>We do not use cookies, local storage, or other browser-based tracking.</li>
+            <li>We do not run any analytics services (such as Google Analytics) or third-party tracking pixels.</li>
+            <li>We do not have forms, ecommerce functions, or account registrations.</li>
+          </ul>
+          <h3 class="heading-secondary">Information Processed in Your Browser</h3>
+          <p>Our website uses certain CSS media features to adapt the site's appearance to your device and accessibility preferences:</p>
+          <ul class="list-bulleted">
+            <li><code class="code">prefers-reduced-motion</code>: detects if you have requested reduced animations.</li>
+            <li><code class="code">prefers-color-scheme</code>: detects if your system is set to light mode or dark mode.</li>
+          </ul>
+          <p>These settings are processed locally in your browser. We do not log, store, or transmit this information to our servers or any third party.</p>
+          <h3 class="heading-secondary">Fonts and Site Hosting</h3>
+          <p>All fonts used on our site are downloaded from Google Fonts and hosted locally on our own server. No connection to Google Fonts is made when you visit our site, and no data is sent to Google.</p>
+          <p>Our website is hosted on GitHub Pages, a service provided by GitHub, Inc. When you visit our site, GitHub may collect and store standard web server logs (such as your IP address and browser type) for operational and security purposes. We do not have access to or control over this information.</p>
+          <h3 class="heading-secondary">Third-Party Services</h3>
+          <p>We do not embed, load, or request resources from any third-party domains when you browse our site.</p>
+          <h3 class="heading-secondary">Changes to This Policy</h3>
+          <p>If we make changes to this Privacy Policy, we will update the "Last Updated" date at the top of the page.</p>
         </div>
       </div>
     </section>

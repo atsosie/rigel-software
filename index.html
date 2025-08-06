@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Rigel Software | System Architecture, Design, Development</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+  <link rel="preload" href="/fonts/roboto-mono-v30-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/lato-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/lato-v24-latin-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/fonts.css">
   <link href="styles/main.css" rel="stylesheet">
 </head>
 <body id="homepage-top">
@@ -15,7 +15,7 @@
   <header class="header">
     <nav class="nav" aria-label="Main navigation">
       <h1 class="logo-title">
-        <a class="nav-link nav-title" href="index.html">Rigel Software</a>
+        <a class="nav-link" href="index.html">Rigel Software</a>
       </h1>
       <div aria-hidden="true" class="nav-hr"></div>
       <ul class="nav-link-list list-unstyled" role="list">
@@ -31,13 +31,13 @@
     </div>
     <a class="intro-cta button fade-in" href="#services">Explore Our Services</a>
   </div>
-  <main id="main-content">
+  <main class="main-container" id="main-content">
     <section id="services" class="section">
       <div class="grid-container">
         <div aria-hidden="true" class="section-hr"></div>
         <h2 class="section-heading heading-primary">Services</h2>
         <div class="section-intro">
-          <h3 class="heading-secondary">We're more than developers. We're problem solvers.</h3>
+          <p class="heading-secondary">We're more than developers. We're problem solvers.</p>
           <p>Whether you need to overhaul a legacy system, automate a tedious process, or build new digital tools that fit your needs, we'll bring the right mix of experience, empathy, and technical excellence to make it happen.</p>
         </div>
         <div class="highlight-banner">
@@ -120,7 +120,7 @@
               </ul>
             </li>
             <li class="highlight-card">
-              <h3 class="heading-secondary">E-Commerce UX & Infrustructure Improvements</h3>
+              <h3 class="heading-secondary">E-Commerce UX/UI & Infrustructure Improvements</h3>
               <p>We contributed to revenue-generating digital platforms for a leading North American retailer.</p>
               <ul class="list-bulleted">
                 <li>Improved user experience and conversion rates through data-driven design</li>
