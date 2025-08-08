@@ -103,12 +103,11 @@ p {
 }
 
 .button {
-  display: inline-block;
-  width: auto;
   background: $color-blue-primary;
   border: 2px solid $color-blue-lighter;
   color: $color-grey-light;
   cursor: pointer;
+  display: inline-block;
   font-size: $text-size-body;
   font-weight: 400;
   letter-spacing: 0.125rem;
@@ -117,6 +116,7 @@ p {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  width: auto;
 
   &:hover {
     background-color: $color-amber-light;
@@ -172,7 +172,7 @@ p {
   flex-direction: column;
   gap: 0.5rem;
   list-style: disc;
-  margin-left: 1rem;
+  margin-inline-start: 1rem;
   margin-top: 1rem;
 
   li {
@@ -184,7 +184,7 @@ p {
   }
 
   @media (min-width: $breakpoint-tablet-and-above) {
-    margin-left: 2rem;
+    margin-inline-start: 2rem;
   }
 
   + p {
@@ -324,8 +324,8 @@ h1.logo-title {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  justify-content: center;
   height: 100vh;
+  justify-content: center;
   padding: 5vw;
   position: relative;
   z-index: 1000;

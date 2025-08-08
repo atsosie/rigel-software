@@ -64,12 +64,11 @@ p + p {
 }
 
 .button {
-  display: inline-block;
-  width: auto;
   background: #1e3a5f;
   border: 2px solid #3c5a87;
   color: #dcdee5;
   cursor: pointer;
+  display: inline-block;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.125rem;
@@ -78,6 +77,7 @@ p + p {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  width: auto;
 }
 .button:hover {
   background-color: #915865;
@@ -135,7 +135,7 @@ p + p {
   flex-direction: column;
   gap: 0.5rem;
   list-style: disc;
-  margin-left: 1rem;
+  margin-inline-start: 1rem;
   margin-top: 1rem;
 }
 .list-bulleted li {
@@ -146,7 +146,7 @@ p + p {
 }
 @media (min-width: 768px) {
   .list-bulleted {
-    margin-left: 2rem;
+    margin-inline-start: 2rem;
   }
 }
 .list-bulleted + p {
@@ -280,8 +280,8 @@ h1.logo-title .nav-link {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  justify-content: center;
   height: 100vh;
+  justify-content: center;
   padding: 5vw;
   position: relative;
   z-index: 1000;
