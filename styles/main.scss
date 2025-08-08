@@ -107,7 +107,7 @@ p {
   width: auto;
   background: $color-blue-primary;
   border: 2px solid $color-blue-lighter;
-  color: $color-warm-white;
+  color: $color-grey-light;
   cursor: pointer;
   font-size: $text-size-body;
   font-weight: 400;
@@ -117,7 +117,6 @@ p {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
 
   &:hover {
     background-color: $color-amber-light;
@@ -209,35 +208,6 @@ p {
   &:active {
     color: $color-amber-dark;
   }
-
-  @media (min-width: $breakpoint-tablet-and-above) {
-    background: linear-gradient(to right, $color-grey-medium, $color-grey-medium);
-    background-size: 100% 2px, 0 2px;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    padding-bottom: 3px;
-    position: relative;
-    text-decoration: none;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      border-radius: 4px;
-      background-color: $color-amber-dark;
-      bottom: 0;
-      left: 0;
-      transform-origin: right;
-      transform: scaleX(0);
-      transition: transform .3s ease-in-out;
-    }
-
-    &:hover::before {
-      transform-origin: left;
-      transform: scaleX(1);
-    }
-  }
 }
 
 .skip-link {
@@ -269,6 +239,7 @@ p {
 .header-base {
   align-items: center;
   background: $color-white;
+  box-shadow: 0 2px 8px 0 rgba(30, 58, 95, 0.08);
   display: flex;
   padding: 10px 20px;
   position: fixed;
@@ -281,12 +252,9 @@ p {
 }
 
 .header-homepage {
-  transform: translateY(-100%);
-  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
-  will-change: transform;
+  z-index: 999;
 
   &.header-visible {
-    transform: translateY(0);
     z-index: 2000;
   }
 }
@@ -351,9 +319,8 @@ h1.logo-title {
 
 // Intro
 .intro {
-  animation: gradientMove 12s ease-in-out infinite;
   background: linear-gradient(350deg, $color-teal, $color-teal-dark, $color-blue-lighter, $color-blue-light, $color-blue-primary, $color-blue-dark, $color-blue-darker, $color-blue-darkest);
-  background-size: 200% 200%;
+  background-size: 145% 145%;
   display: flex;
   flex-direction: column;
   gap: 5rem;
@@ -372,25 +339,6 @@ h1.logo-title {
   }
 }
 
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.fade-in {
-  animation: fadeInUp 0.5s ease-out forwards;
-  opacity: 0;
-  transform: translateY(10px);
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
 .logo-image {
   svg {
     display: block;
@@ -403,6 +351,32 @@ h1.logo-title {
     @media (min-width: $breakpoint-tablet-and-above) {
       max-width: 60vw;
     }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes fadeInDown {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .intro {
+    animation: gradientMove 12s ease-in-out infinite;
+    background-size: 200% 200%;
+  }
+
+  .fade-in {
+    animation: fadeInDown 0.5s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-10px);
   }
 }
 
@@ -467,6 +441,7 @@ h1.logo-title {
 .highlight-banner {
   background-color: $color-blue-lighter;
   background-image: url("../images/painted-canvas-layer4.png");
+  background-size: cover;
   display: grid;
   grid-column: 1 / -1;
   grid-template-columns: minmax(1rem, 5vw) 1fr minmax(1rem, 5vw);
@@ -494,14 +469,12 @@ h1.logo-title {
 
 .highlight-card {
   background: rgba(251, 249, 250, 0.85);
-  box-shadow: 0 4px 24px 0 rgba(55, 55, 65, 0.10);
   display: flex;
   flex-direction: column;
   flex: 1;
   overflow: hidden;
   padding: 1rem;
   position: relative;
-  transition: box-shadow 0.2s, border-color 0.2s;
 
   @media (min-width: $breakpoint-tablet-and-above) {
     padding: 2.5rem;
@@ -513,14 +486,21 @@ h1.logo-title {
     }
   }
 
-  &:hover,
-  &:focus-within {
-    box-shadow: 0 8px 32px 0 $color-blue-primary-faded;
-    border-color: $color-blue-light;
-  }
-
   .heading-primary,.heading-secondary, .heading-tertiary {
     margin-top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .highlight-card {
+    box-shadow: 0 4px 24px 0 rgba(55, 55, 65, 0.10);
+    transition: box-shadow 0.2s, border-color 0.2s;
+
+    &:hover,
+    &:focus-within {
+      box-shadow: 0 8px 32px 0 $color-blue-primary-faded;
+      border-color: $color-blue-light;
+    }
   }
 }
 
@@ -553,7 +533,7 @@ h1.logo-title {
 }
 
 .footer-link {
-  color: $color-warm-white;
+  color: $color-grey-light;
 
   &:hover {
     color: $color-amber-light;
@@ -562,7 +542,7 @@ h1.logo-title {
 
 .footer {
   background: $color-blue-primary;
-  color: $color-warm-white;
+  color: $color-grey-light;
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
 
@@ -573,9 +553,6 @@ h1.logo-title {
 
 .footer-copyright {
   grid-column: 2 / 5;
+  grid-row: 2;
   margin-top: 1.5rem;
-
-  @media (min-width: $breakpoint-tablet-and-above) {
-    grid-column: 2 / 3;
-  }
 }

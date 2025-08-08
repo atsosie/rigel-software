@@ -5,6 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
   if (!header || !intro) return;
   const navLinks = header.querySelectorAll('.nav-link');
 
+  /**
+   * If the intro is visible (e.g., on initial page load), the header is hidden with
+   * a lower z-index and will be revealed as the user scrolls down past the intro.
+   * If header links receive focus (e.g., user tabs through links before scrolling down),
+   * the header z-index is increased to make it visible over the intro.
+   */
   function updateHeaderVisibility() {
     const introRect = intro.getBoundingClientRect();
 
@@ -15,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Show header when any nav link receives focus
+  // Make header visible and accessible when any nav link receives focus
   navLinks.forEach(link => {
     link.addEventListener('focus', () => {
       header.classList.add('header-visible');
@@ -24,9 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
     link.addEventListener('blur', updateHeaderVisibility);
   });
 
-  // Show/hide header on scroll
   window.addEventListener('scroll', updateHeaderVisibility);
 
-  // Hide header on load (if intro is visible)
+  // Hide header on page load (if intro is visible)
   updateHeaderVisibility();
 });
