@@ -24,8 +24,10 @@ $color-warm-white: #fbf9fa;
 $color-white: #ffffff;
 
 // Sizes
-$section-space-top-mobile: 155px;
+$breakpoint-desktop-and-above: 1050px;
+$breakpoint-tablet-and-above: 768px; // width of iPad Mini
 $section-space-top-desktop: 100px;
+$section-space-top-mobile: 160px;
 $text-size-body: 18px;
 $text-size-medium: 1.25rem;
 $text-size-large: 1.5rem;
@@ -34,6 +36,8 @@ $text-size-xlarge: 1.75rem;
 
 // CSS Custom Properties (for fallback or JS use)
 :root {
+  --breakpoint-desktop-and-above: #{$breakpoint-desktop-and-above};
+  --breakpoint-tablet-and-above: #{$breakpoint-tablet-and-above};
   --color-amber-dark: #{$color-amber-dark};
   --color-amber-light: #{$color-amber-light};
   --color-blue-primary: #{$color-blue-primary};
@@ -50,8 +54,8 @@ $text-size-xlarge: 1.75rem;
   --color-grey-light: #{$color-grey-light};
   --color-warm-white: #{$color-warm-white};
   --color-white: #{$color-white};
-  --section-space-top-mobile: #{$section-space-top-mobile};
   --section-space-top-desktop: #{$section-space-top-desktop};
+  --section-space-top-mobile: #{$section-space-top-mobile};
   --text-size-body: #{$text-size-body};
   --text-size-medium: #{$text-size-medium};
   --text-size-large: #{text-size-large};
@@ -128,7 +132,7 @@ p {
   margin-bottom: 1rem;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     font-size: $text-size-large;
   }
 }
@@ -140,7 +144,7 @@ p {
   margin-bottom: 1rem;
   margin-top: 2rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     font-size: $text-size-large;
   }
 }
@@ -151,7 +155,7 @@ p {
   margin-bottom: 0.5rem;
   margin-top: 1rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     font-size: $text-size-medium;
   }
 }
@@ -180,7 +184,7 @@ p {
     color: $color-amber-light;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     margin-left: 2rem;
   }
 
@@ -206,7 +210,7 @@ p {
     color: $color-amber-dark;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     background: linear-gradient(to right, $color-grey-medium, $color-grey-medium);
     background-size: 100% 2px, 0 2px;
     background-position: 100% 100%, 0 100%;
@@ -271,7 +275,7 @@ p {
   width: 100%;
   z-index: 999;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     padding: 20px;
   }
 }
@@ -303,12 +307,12 @@ h1.logo-title {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   justify-content: space-between;
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     flex-direction: row;
+    gap: 0.5rem;
   }
 }
 
@@ -316,7 +320,7 @@ h1.logo-title {
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     flex-direction: row;
     gap: 0.5rem;
   }
@@ -326,23 +330,21 @@ h1.logo-title {
   display: block;
   font-size: $text-size-body;
   margin-bottom: 0.5rem;
+  text-decoration: none;
   white-space: nowrap;
 
   &:hover {
     color: $color-amber-dark;
-    text-decoration: none;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     border: 2px solid transparent;
     display: inline;
     margin: 0;
     padding: 10px;
-    text-decoration: none;
 
     &:hover {
       border: 2px solid $color-amber-dark;
-      text-decoration: none;
     }
   }
 }
@@ -365,7 +367,7 @@ h1.logo-title {
 .intro-cta {
   align-self: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     align-self: flex-start;
   }
 }
@@ -398,7 +400,7 @@ h1.logo-title {
     object-fit: contain;
     width: auto;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint-tablet-and-above) {
       max-width: 60vw;
     }
   }
@@ -410,7 +412,7 @@ h1.logo-title {
   display: grid;
   grid-template-columns: minmax(10px, 5vw) 1fr 1fr 1fr minmax(10px, 5vw);
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     column-gap: 1.5rem;
   }
 }
@@ -423,7 +425,7 @@ h1.logo-title {
 .section {
   padding-top: $section-space-top-mobile;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     padding-top: $section-space-top-desktop;
   }
 }
@@ -437,7 +439,7 @@ h1.logo-title {
   margin-bottom: 1.5rem;
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     margin-bottom: 2rem;
   }
 }
@@ -447,7 +449,7 @@ h1.logo-title {
   grid-row: 1;
   margin-bottom: 1.5rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     margin-bottom: 2rem;
   }
 }
@@ -456,7 +458,7 @@ h1.logo-title {
   grid-column: 2 / 5;
   grid-row: 2;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     grid-column: 2 / 4;
   }
 }
@@ -471,7 +473,7 @@ h1.logo-title {
   margin-top: 2rem;
   padding: 1rem 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     grid-template-columns: minmax(1rem, 5vw) 1fr minmax(1rem, 5vw);
     margin-top: 3rem;
     padding: 2.5rem;
@@ -484,7 +486,7 @@ h1.logo-title {
   grid-column: 2;
   grid-template-columns: 1fr;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     grid-template-columns: repeat(2, minmax(250px, 1fr));
     gap: 1.5rem;
   }
@@ -501,12 +503,12 @@ h1.logo-title {
   position: relative;
   transition: box-shadow 0.2s, border-color 0.2s;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     padding: 2.5rem;
   }
 
   &.wide-card {
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint-tablet-and-above) {
       grid-column: 1 / -1;
     }
   }
@@ -545,7 +547,7 @@ h1.logo-title {
     line-height: 2;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     grid-column: 2 / 3;
   }
 }
@@ -562,13 +564,18 @@ h1.logo-title {
   background: $color-blue-primary;
   color: $color-warm-white;
   padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+
+  @media (min-width: $breakpoint-tablet-and-above) {
+    padding-top: 5rem;
+  }
 }
 
 .footer-copyright {
   grid-column: 2 / 5;
   margin-top: 1.5rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet-and-above) {
     grid-column: 2 / 3;
   }
 }

@@ -1,4 +1,6 @@
 :root {
+  --breakpoint-desktop-and-above: 1050px;
+  --breakpoint-tablet-and-above: 768px;
   --color-amber-dark: #5c2936;
   --color-amber-light: #915865;
   --color-blue-primary: #1e3a5f;
@@ -15,8 +17,8 @@
   --color-grey-light: #dcdee5;
   --color-warm-white: #fbf9fa;
   --color-white: #ffffff;
-  --section-space-top-mobile: 155px;
   --section-space-top-desktop: 100px;
+  --section-space-top-mobile: 160px;
   --text-size-body: 18px;
   --text-size-medium: 1.25rem;
   --text-size-large: text-size-large;
@@ -260,13 +262,13 @@ h1.logo-title .nav-link {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   justify-content: space-between;
   width: 100%;
 }
 @media (min-width: 768px) {
   .nav {
     flex-direction: row;
+    gap: 0.5rem;
   }
 }
 
@@ -285,11 +287,11 @@ h1.logo-title .nav-link {
   display: block;
   font-size: 18px;
   margin-bottom: 0.5rem;
+  text-decoration: none;
   white-space: nowrap;
 }
 .nav-link:hover {
   color: #5c2936;
-  text-decoration: none;
 }
 @media (min-width: 768px) {
   .nav-link {
@@ -297,11 +299,9 @@ h1.logo-title .nav-link {
     display: inline;
     margin: 0;
     padding: 10px;
-    text-decoration: none;
   }
   .nav-link:hover {
     border: 2px solid #5c2936;
-    text-decoration: none;
   }
 }
 
@@ -382,7 +382,7 @@ h1.logo-title .nav-link {
 }
 
 .section {
-  padding-top: 155px;
+  padding-top: 160px;
 }
 @media (min-width: 768px) {
   .section {
@@ -523,6 +523,12 @@ h1.logo-title .nav-link {
   background: #1e3a5f;
   color: #fbf9fa;
   padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding-top: 5rem;
+  }
 }
 
 .footer-copyright {
