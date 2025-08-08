@@ -349,7 +349,7 @@ h1.logo-title {
     width: auto;
 
     @media (min-width: $breakpoint-tablet-and-above) {
-      max-width: 60vw;
+      max-width: 50vw;
     }
   }
 }
@@ -369,7 +369,7 @@ h1.logo-title {
   }
 
   .intro {
-    animation: gradientMove 12s ease-in-out infinite;
+    animation: gradientMove 10s ease-in-out infinite;
     background-size: 200% 200%;
   }
 
