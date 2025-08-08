@@ -262,7 +262,7 @@ p {
 }
 
 // Header & Navigation
-.header {
+.header-base {
   align-items: center;
   background: $color-white;
   display: flex;
@@ -272,8 +272,18 @@ p {
   z-index: 999;
 
   @media (min-width: 768px) {
-    background: $color-white;
     padding: 20px;
+  }
+}
+
+.header-homepage {
+  transform: translateY(-100%);
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  will-change: transform;
+
+  &.header-visible {
+    transform: translateY(0);
+    z-index: 2000;
   }
 }
 
@@ -353,7 +363,11 @@ h1.logo-title {
 }
 
 .intro-cta {
-  align-self: flex-start;
+  align-self: center;
+
+  @media (min-width: 768px) {
+    align-self: flex-start;
+  }
 }
 
 @keyframes gradientMove {
@@ -385,7 +399,7 @@ h1.logo-title {
     width: auto;
 
     @media (min-width: 768px) {
-      max-width: 50vw;
+      max-width: 60vw;
     }
   }
 }
