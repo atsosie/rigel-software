@@ -170,16 +170,15 @@ p + p {
 }
 
 .skip-link {
-  background: #fbf9fa;
-  color: #1e3a5f;
+  background: #dcdee5;
   font-weight: 900;
   height: 1px;
   position: absolute;
   left: -999px;
   overflow: hidden;
-  padding: 0.5em 1em;
-  text-decoration: underline;
+  padding: 1em;
   top: auto;
+  text-align: center;
   width: 1px;
   z-index: 10000;
 }
@@ -187,8 +186,9 @@ p + p {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   height: auto;
   left: 1rem;
+  right: 1rem;
   outline: 2px solid #915865;
-  padding: 0.5em 1em;
+  padding: 2em;
   top: 1rem;
   width: auto;
 }
