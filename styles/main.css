@@ -49,6 +49,7 @@ body {
 
 p {
   line-height: 1.75;
+  max-width: 75ch;
   text-wrap: pretty;
 }
 p + p {
